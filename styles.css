@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://initiativetankrabbit.s3.ap-northeast-1.amazonaws.com/%E6%96%B0%E3%81%97%E3%81%84%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%83%BC/%E3%82%A4%E3%83%8B%E3%82%B7%E3%82%A2%E3%83%81%E3%83%96.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.board {
+    display: grid;
+    grid-gap: 2px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.cell {
+    .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.5); /* 背景色を50%の透明度に */
+    }
+    
+    .player1 {
+        background-color: red; /* プレイヤー1の色 */
+    }
+    
+    .player2 {
+        background-color: blue; /* プレイヤー2の色 */
+    }
+    
+    .player3 {
+        background-color: green; /* プレイヤー3の色 */
+    }
+    
+    .player4 {
+        background-color: yellow; /* プレイヤー4の色 */
+    }
+    
+    .mark {
+        font-size: 28px; /* マークのサイズを大きく */
+        font-weight: bold;
+        color: transparent; /* 文字色を透明にして背景色だけ表示 */
+    }
+    
+}
+
+.mark {
+    .mark {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px; /* マークのサイズを大きく */
+        font-weight: bold;
+        color: transparent; /* 文字は透明にして、背景画像の色を使う */
+    }
+    
+    .player1 .mark {
+        background-color: red; /* プレイヤー1のマークの色 */
+    }
+    
+    .player2 .mark {
+        background-color: blue; /* プレイヤー2のマークの色 */
+    }
+    
+    .player3 .mark {
+        background-color: green; /* プレイヤー3のマークの色 */
+    }
+    
+    .player4 .mark {
+        background-color: yellow; /* プレイヤー4のマークの色 */
+    }
+    
+#currentPlayer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* スマートフォン向けの調整 */
+@media (max-width: 768px) {
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .board {
+        grid-template-columns: repeat(10, 40px); /* スマートフォン用に調整 */
+        grid-gap: 1px;
+    }
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .board {
+        grid-template-columns: repeat(8, 30px); /* 非常に小さいスクリーン用に調整 */
+        grid-gap: 1px;
+    }
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+}
+
